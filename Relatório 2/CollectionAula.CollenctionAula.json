@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "66d616159132cac61ac8a83b"
+  },
+  "professor": "Lucas",
+  "assunto": "Computação Gráfica",
+  "alunos": [
+    "Maria",
+    "Pedro",
+    "Henrique",
+    "Julia"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66d616159132cac61ac8a83c"
+  },
+  "professor": "Renzo",
+  "assunto": "Programação Orientada a Objetos",
+  "alunos": [
+    "Maria",
+    "Pedro",
+    "Henrique",
+    "Julia"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66d616159132cac61ac8a83d"
+  },
+  "professor": "Jonas",
+  "assunto": "Banco de Dados II",
+  "alunos": [
+    "Maria",
+    "Pedro",
+    "Henrique",
+    "Julia"
+  ]
+}]
