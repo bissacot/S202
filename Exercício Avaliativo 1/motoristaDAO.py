@@ -1,4 +1,4 @@
-from corrida import Corrida
+from motorista import Motorista
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
@@ -6,9 +6,9 @@ class MotoristaModel:
     def __init__(self, database):
         self.db = database
 
-    def create_motorista(self, corridas: Corrida, nota: int):
+    def create_motorista(self, motorista: Motorista):
         try:
-            res = self.db.collection.insert_one({"corrida": corridas, "nota": nota})
+            res = self.db.collection.insert_one({"Motorista": motorista})
             print(f"motorista created with id: {res.inserted_id}")
             return res.inserted_id
         except Exception as e:
@@ -24,9 +24,9 @@ class MotoristaModel:
             print(f"An error occurred while reading motorista: {e}")
             return None
 
-    def update_motorista(self, id: str, corrida: Corrida, nota: int):
+    def update_motorista(self, id: str, motorista: Motorista, nota: int):
         try:
-            res = self.db.collection.update_one({"_id": ObjectId(id)}, {"$set": {"corrida": corrida, "nota": nota}})
+            res = self.db.collection.update_one({"_id": ObjectId(id)}, {"$set": {"Motorista": motorista}})
             print(f"motorista updated: {res.modified_count} document(s) modified")
             return res.modified_count
         except Exception as e:

@@ -50,7 +50,7 @@ class MotoristaCLI(SimpleCLI):
         motoristaObjeto = Motorista(corridaObjeto, motoristaNota)
 
         #Enviando
-        self.motorista_model.create_motorista(corridaObjeto, motoristaNota)
+        self.motorista_model.create_motorista(motoristaObjeto)
 
     def read_motorista(self):
         id = input("Enter the id: ")
